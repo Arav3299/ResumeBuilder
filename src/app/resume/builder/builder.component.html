@@ -1,0 +1,428 @@
+<div class="container pt-4 pb-4">
+    <div class="col-lg-12 col-md-12 col-12">
+        <div class="row">
+            <form [formGroup]="resumeForm" (ngSubmit)="onSubmit()">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <h3>Personal Details</h3>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Name</label>
+                                    <input type="text" formControlName="name" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    <input type="text" formControlName="email" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Phone number</label>
+                                    <input type="text" formControlName="number" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <input type="text" formControlName="role" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>City</label>
+                                    <input type="text" formControlName="city" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>State</label>
+                                    <input type="text" formControlName="state" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-12">
+                                <div class="form-group">
+                                    <label>Upload photo</label>
+                                    <input type="file" class="form-control" id="photo" (change)="onFileChanged($event)" formControlName="photo">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>Skills</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>Skill 1</label>
+                                    <input type="text" formControlName="skill1" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="p1" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>Skill 2</label>
+                                    <input type="text" formControlName="skill2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="p2" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>Skill 3</label>
+                                    <input type="text" formControlName="skill3" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="p3" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>Skill 4</label>
+                                    <input type="text" formControlName="skill4" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="p4" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>Skill 5</label>
+                                    <input type="text" formControlName="skill5" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="p5" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>Languages Known</h3>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Language 1</label>
+                                    <input type="text" formControlName="language1" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="lp1" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>language 2</label>
+                                    <input type="text" formControlName="language2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="lp2" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                            <div class="col-lg-3 col-md-3 col-12">
+                                <div class="form-group">
+                                    <label>Language 3</label>
+                                    <input type="text" formControlName="language3" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 col-12">
+                                <div class="form-group">
+                                    <label>Proficieny</label>
+                                    <select  formControlName="lp3" class="form-control">
+                                        <option ngValue="" selected disabled hidden>Choose</option>
+                                        <option *ngFor="let pro of proficiency" [ngValue]="pro">
+                                            {{pro}}
+                                        </option>
+                                    </select>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>Work Experience</h3>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Role</label>
+                                    <input type="text" formControlName="roleInCompany" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <input type="text" formControlName="company" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Starting Date</label>
+                                    <input type="date" formControlName="fromw" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Ending Date</label>
+                                    <input type="date" formControlName="tow" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea class="form-control" formControlName="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>Academic details</h3>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <h5>College details</h5>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>College Name</label>
+                                                    <input type="text" formControlName="college" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Course Start</label>
+                                                <select  formControlName="fromc" class="form-control">
+                                                    <option ngValue="" selected disabled hidden>Choose year</option>
+                                                    <option *ngFor="let year of yearArray" [ngValue]="year">
+                                                        {{year}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Course end</label>
+                                                <select id="cend" class="form-control" formControlName="toc">
+                                                    <option ngValue="" selected disabled hidden>Choose year</option>
+                                                    <option *ngFor="let year of yearArray" [ngValue]="year">
+                                                        {{year}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">About</label>
+                                                <textarea formControlName="aboutclg" class="form-control" ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="row">
+                                            <h5>10th details</h5>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label>School Name</label>
+                                                    <input type="text" formControlName="school10" class="form-control">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Course Start</label>
+                                                <select formControlName="from10" class="form-control">
+                                                    <option ngValue="" selected disabled hidden>Choose year</option>
+                                                    <option *ngFor="let year of yearArray" [ngValue]="year">
+                                                        {{year}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label>Course end</label>
+                                                <select formControlName="to10" class="form-control">
+                                                    <option ngValue="" selected disabled hidden>Choose year</option>
+                                                    <option *ngFor="let year of yearArray" [ngValue]="year">
+                                                        {{year}}
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <label for="">About</label>
+                                                <textarea formControlName="abouts10" class="form-control" ></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <div class="col-md-6 offset-md-6">
+                                <h5>12th details</h5>
+                                <div class="row">
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>School Name</label>
+                                            <input type="text" formControlName="school12" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Course Start</label>
+                                        <select  formControlName="from12" class="form-control">
+                                            <option ngValue="" selected disabled hidden>Choose year</option>
+                                            <option *ngFor="let year of yearArray" [ngValue]="year">
+                                                {{year}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label>Course end</label>
+                                        <select  formControlName="to12" class="form-control">
+                                            <option ngValue="" selected disabled hidden>Choose year</option>
+                                            <option *ngFor="let year of yearArray" [ngValue]="year">
+                                                {{year}}
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label for="">About</label>
+                                        <textarea formControlName="abouts12" class="form-control" ></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>Interests</h3>
+                        <div class="row">
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Interest 1</label>
+                                    <input type="text" formControlName="interest1" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Interest 3</label>
+                                    <input type="text" formControlName="interest2" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-12">
+                                <div class="form-group">
+                                    <label>Interest 3</label>
+                                    <input type="text" formControlName="interest3" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>Certifications</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Certificate Name</label>
+                                    <input type="text" formControlName="certificate" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label>From</label>
+                                <select  formControlName="fromcert" class="form-control">
+                                    <option ngValue="" selected disabled hidden>Choose year</option>
+                                    <option *ngFor="let year of yearArray" [ngValue]="year">
+                                        {{year}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-3">
+                                <label>To</label>
+                                <select  formControlName="tocert" class="form-control">
+                                    <option ngValue="" selected disabled hidden>Choose year</option>
+                                    <option *ngFor="let year of yearArray" [ngValue]="year">
+                                        {{year}}
+                                    </option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">About</label>
+                                <textarea formControlName="aboutcert" class="form-control" ></textarea>
+                            </div>
+
+                        </div>
+                        <div class="pt-3"></div>
+                        <h3>project details</h3>
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <label>About project</label>
+                                <textarea formControlName="aboutproject" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 col-12 text-center pt-4">
+                                <button class="btn btn-primary">Generate</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ 

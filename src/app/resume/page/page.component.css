@@ -1,0 +1,156 @@
+.fa{
+  /* color: rgb(6,156,156); */
+  color:#2a78ab;
+}
+
+#button{
+  position: fixed;
+  bottom: 30px;
+  right: 5px;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
+}
+
+
+.findarav{
+  justify-content: space-around;
+}
+
+
+
+
+
+h6 {
+margin-top: 0;
+margin-bottom: 0.5rem;
+font-weight: 500;
+line-height: 1.2;
+}
+
+.textdata h6{
+  margin-bottom: 1.5rem;
+
+}
+
+.progress-bar-striped {
+background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+background-size: 0.75rem 0.75rem;
+}
+.progress-bar-animated {
+-webkit-animation: progress-bar-stripes 1s linear infinite;
+animation: progress-bar-stripes 1s linear infinite;
+}
+
+.progress-bar {
+display: -webkit-box;
+display: -ms-flexbox;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+-ms-flex-direction: column;
+flex-direction: column;
+-webkit-box-pack: center;
+-ms-flex-pack: center;
+justify-content: center;
+overflow: hidden;
+color: #fff;
+text-align: center;
+white-space: nowrap;
+/* background-color: #0c3b5d6e; */
+background-color: #44c8e0;
+-webkit-transition: width 0.6s ease;
+transition: width 0.6s ease;
+}
+
+.newcard
+{
+background-color: #2a78ab;
+  color: #fff;
+}
+
+.newcard .fa{
+color: #fff;
+}
+
+.allcenter
+{
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 28px;
+}
+
+
+.finddata{
+  /* height:175px;
+  flex:0 0 175px; */
+  width: 400px;
+  height: 280px;
+  text-align: center;
+  display: block;
+}
+
+.finddata  img{
+  width: 100%;
+  height:100%;
+  object-fit: cover;
+  border-radius: 50% !important;
+  overflow: hidden !important;
+}
+
+.backdata
+{
+background-color: #2a78ab;
+color: #fff;
+border-radius: 8px; 
+}
+.newimage
+{
+  height: 90px;
+  flex: 0 0 90px;
+  /* align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  overflow: hidden; */
+}
+
+.rounded-image
+{
+  width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+ 
+
+.findarav.purple {
+background: linear-gradient(150deg, #2a78ab, #4cdeef 100%);
+color:#fff;
+border-radius: 18px;
+}
+
+.findarav.green {
+background: linear-gradient(150deg, #39ef74, #4600f1 100%);
+}
+
+textarea:focus, input:focus{
+  outline: none;
+  border-color: none !important;
+}
+
+
+
+
+
+.form-control:focus {
+  outline: none ;
+  border:none;
+  border-color:none !important;
+}

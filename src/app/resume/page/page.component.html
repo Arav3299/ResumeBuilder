@@ -1,0 +1,119 @@
+<div class="text-center me-5 py-2"><button class="btn btn-primary" (click)="exportAsPdf()">Download</button></div>
+<div id="myResume" class="container">
+    <div class="row mx-2 my-2 py-2">
+        <div class="col-lg-4 col-md-4 col-12 pt-2">
+            <div class="backdata">  
+                <div class="allcenter">
+                    <div class="finddata">
+                            <img src={{photo}} class="" alt="myImage">
+                    </div>
+                </div>
+                <h3 class="mx-2 pt-2 text-center text-uppercase">{{name}}</h3>
+                <div class="card newcard">
+                <div class="card-body">
+                    <div class="textdata">
+                    <h6><i class="fa fa-briefcase me-2"></i>{{role}}</h6>
+                    <h6><i class="fa fa-home me-2"></i>{{city}},{{state}}</h6>
+                    <h6><i class="fa fa-envelope me-2"></i>{{email}}</h6>
+                    <h6><i class="fa fa-phone alt me-2"></i>+91{{ number}}</h6>
+                </div>
+                    <hr>
+                    <h3><i class="fa fa-asterisk me-2"></i>Skills</h3>
+                    <div *ngFor="let details of skills">
+                    <h6>{{details.skill}}</h6>
+                    <div class="progress rounded-pill my-3" height="20px">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated" [ngStyle]="{'height':'100%','width':details.pro+'%'}">{{details.pro}}</div>
+                    </div>
+                    </div>
+                    <hr>
+                    <h3><i class="fa fa-globe mt-3"></i> Language</h3>
+                    <div *ngFor="let details of languages">
+                        <h6>{{details.lang}}</h6>
+                        <div class="progress rounded-pill my-3" height="20px">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated" [ngStyle]="{'height':'100%','width':details.pro+'%'}">{{details.pro}}</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="col-lg-8 col-md-8 col-12 pt-2">
+            <div class="card newcard">
+                <div class="card-body">
+                    <div class="findarav purple">
+                    <h3 class="my-3 ms-3"><i class="fa fa-suitcase my-3 me-3"></i> Work Experience</h3>
+                </div>
+                    <h5>{{roleInCompany}} /{{company}}</h5>
+                    <h6><i class="fa fa-calendar my-2 me-3"></i>{{fromw}} - {{tow}} </h6>
+                        <!-- <button class="btn btn-success px-3 py-0">current</button> -->
+                    <p> {{desc}}.</p>
+                </div>
+            </div>
+            <div class="card newcard mt-2">
+                <div class="card-body">
+                    <div class="findarav purple">
+                        <h3 class="my-3 ms-3"><i class="fa fa-certificate me-3 my-3"></i>Academic Profile</h3>
+                       
+                       </div> 
+                       <div *ngFor="let ac of academic;index as i">
+                        <h5 class="mt-3">{{ac.name}}</h5>
+                        <h6><i class="fa fa-calendar my-2 me-2"></i>{{ac.from}} - {{ac.to}}</h6>
+                        <p>{{ac.desc}}.</p>
+                        <hr *ngIf="i<2">
+                       </div>
+                </div>
+            </div>
+             
+            <div class="card newcard mt-2">
+                <div class="card-body">
+                    <div class="findarav purple">
+                    <h3 class="my-3 ms-3"><i class="fa fa-thumbs-up me-3 my-3"></i>Interests</h3>
+                </div>
+                    <div class="row findarav">
+
+                        <div class="col-lg-4 col-md-4 col-12" *ngFor="let i of interests">
+                            <i class="fa-solid fa-circle me-2"></i>{{i}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card newcard mt-2">
+                <div class="card-body">
+                    <div class="findarav purple">
+                    <h3 class="my-3 ms-3"><i class="fa fa-award me-3 my-3"></i>Certifications</h3>
+                </div>
+                <h5 class="mt-3">{{certificate}}</h5>
+                <h6><i class="fa fa-calendar my-2 me-2"></i>{{fromcert}} - {{tocert}}</h6>
+                <p>{{aboutcert}}.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-2 my-2">
+        <div class="col-lg-12 col-md-12 col-12">
+            <div class="card newcard mt-2">
+                <div class="card-body">
+                    <div class="findarav purple">
+                        <h3 class="my-2 ms-3"><i class="fa fa-list-check me-3 my-2"></i>Projects</h3>
+                    </div>
+                    <p>{{project}}.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mx-2 my-2">
+        <div class="col-lg-12 col-md-12 col-12">
+        <div class="card newcard mt-2">
+            <div class="card-body">
+                <div class="findarav purple">
+                    <h4 class="my-3 ms-3">Declarations</h4>
+                </div>
+                <p class="ms-5 pt-1">Hereby, I declare that all the above mentioned details are true to my knowledge.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+<button *ngIf="isShow" type="button" class="btn btn-danger btn-floating btn-lg rounded-circle border-dark" id="button" (click)="gotoTop()">
+  <i class="fas fa-arrow-up"></i>
+</button>
